@@ -6,7 +6,7 @@ function tick() {
 	intHours = today.getHours();
 	intMinutes = today.getMinutes();
 	intSeconds = today.getSeconds();
-	if (intHours == 0) {
+	if (intHours === 0) {
 		hours = "12:";
 		txtNow = "现在是午夜";
 		txtDo = "，该休息了。"
@@ -14,7 +14,7 @@ function tick() {
 		hours = intHours + ":";
 		txtNow = "现在是上午";
 		txtDo = "，新的一天开始了。";
-	} else if (intHours == 12) {
+	} else if (intHours === 12) {
 		hours = "12:";
 		txtNow = "现在是正午";
 		txtDo = "，该午休了。";
@@ -35,9 +35,8 @@ function tick() {
 	} else {
 		seconds = intSeconds + "";
 	}
-	var timeString = "<div>" + txtNow + "<b>" + hours + minutes + seconds + "</b>" + txtDo + "</div>";
-	document.getElementById('clock').innerHTML = timeString;
-
+	document.getElementById('clock').innerHTML = "<div>" + txtNow + "<b>" + hours + minutes + seconds + "</b>" + txtDo + "</div>";
 	window.setTimeout("tick();", 500);
 }
+
 window.onload = tick;
