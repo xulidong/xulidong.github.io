@@ -6,6 +6,14 @@ body {
     background-color: #CCE8CF;
 }
 
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    z-index: -1;
+}
+
 h1 {
     text-align: center;
     font-weight: bold;
@@ -59,8 +67,24 @@ a.website {
     padding: 8px 50px;
 }
 
-a.website:hover {
-    color: green;
+/* 未访问的链接 */
+a:link {
+    color: #000;
+}
+
+/* 已访问的链接 */
+a:visited {
+    color: #F00;
+}
+
+/* 鼠标在链接上 */
+a:hover {
+    color: #0F0;
+}
+
+/* 激活链接 */
+a:active {
+    color: #00F;
 }
 
 /*

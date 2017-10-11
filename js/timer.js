@@ -1,4 +1,4 @@
-function tick() {
+function showCurTime() {
 	var hours, minutes, seconds, txtNow, txtDo;
 	var intHours, intMinutes, intSeconds;
 	var today;
@@ -36,7 +36,5 @@ function tick() {
 		seconds = intSeconds + "";
 	}
 	document.getElementById('clock').innerHTML = "<div>" + txtNow + "<b>" + hours + minutes + seconds + "</b>" + txtDo + "</div>";
-	window.setTimeout("tick();", 500);
+	window.requestAnimationFrame(showCurTime);
 }
-
-window.onload = tick;
