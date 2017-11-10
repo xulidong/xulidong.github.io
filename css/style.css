@@ -46,6 +46,8 @@ li {
     margin: 0px;
 }
 
+
+
 marquee {
     behavior: "altemate";
     width: 400px;
@@ -103,4 +105,22 @@ a:active {
 
 #copy_right {
     text-align: center;
+}
+
+#ul_nav {
+    list-style-type:none;
+    margin-bottom: 20px;
+    padding:0;
+    padding-top:6px;
+    padding-bottom:6px;
+    border: solid 2px white;
+}
+
+#ul_nav li{
+    list-style-image: none;
+    list-style-type: none;
+    text-align: left;
+    float: left;
+    padding: 5px;
+    margin: 5px;
 }
